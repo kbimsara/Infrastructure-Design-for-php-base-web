@@ -1,5 +1,5 @@
 <?php
-$serverName="localhost";
+$serverName="db";
 // $serverName="34.65.250.137:3306";
 $userName = "root";
 $password ="";
@@ -10,5 +10,6 @@ $Connector = new mysqli($serverName, $userName, $password, $databaseName);
 
 //check database cpnnect or not
 if($Connector->connect_error){
-    die("Connection is failed" . $dbConnector->connect_error);
+    die("Connection is failed" . $Connector->connect_error);
+
 }

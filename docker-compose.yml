@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web-ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./web-ui:/var/www/html
+    networks:
+      - mynetwork
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: aws-crud
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./DB/aws-crud.sql:/docker-entrypoint-initdb.d/aws-crud.sql
+    networks:
+      - mynetwork
+
+volumes:
+  db_data:
+
+networks:
+  mynetwork:
