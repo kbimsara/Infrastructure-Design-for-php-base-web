@@ -123,7 +123,7 @@
         }else{
 ?>
                     <tr style="text-align: center;">
-                        <th colspan="4">No Data</th>
+                        <th colspan="5">No Data</th>
                     </tr>
                     <?php
         }

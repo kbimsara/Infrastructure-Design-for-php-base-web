@@ -2,7 +2,7 @@
 $serverName="db";
 // $serverName="34.65.250.137:3306";
 $userName = "root";
-$password ="";
+$password ="rootpass";
 $databaseName = "aws-crud";
 
 //connect database to variable

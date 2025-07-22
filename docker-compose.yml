@@ -1,14 +1,14 @@
 version: '3.8'
 
 services:
-  web:
-    build: ./web-ui
+  web-ui:
+    build: ./Web UI
     ports:
       - "8080:80"
     depends_on:
       - db
     volumes:
-      - ./web-ui:/var/www/html
+      - ./Web UI:/var/www/html
     networks:
       - mynetwork
 
